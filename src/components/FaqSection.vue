@@ -1,66 +1,86 @@
 <template>
-  <section class="middle">
+  <main>
     <div class="heading">
       <h2>FAQs</h2>
       <p>How can we help you?</p>
+      <form>
+        <input
+          type="text"
+          class="form-input"
+          placeholder="Please enter your question"
+        />
+        <input class="form-btn" type="submit" value="Send" />
+      </form>
     </div>
-    <form>
-      <input
-        type="text"
-        class="form-input"
-        placeholder="Please enter your question"
-      />
-      <input class="form-btn" type="submit" value="Send" />
-    </form>
-    <!-- <section class="questions">
-      <article>
-        <div class="question-header">
-          <h4>
-            <i class="fa-solid fa-arrow-right"></i>
-            How many pictures am I allowed to upload?
-          </h4>
-          <p>
-            There is no limit to the number of images you can upload on your
-            account, as number depends on the owner of the account.
-          </p>
-        </div>
-      </article>
 
-      <div class="confirmation">
-        <p>Was this article helpful?</p>
-        <div class="confirmation-container">
-          <button>Yes</button>
-          <button>No</button>
-        </div>
-        <button>Help Center</button>
-      </div>
-    </section> -->
-  </section>
+    <section>
+      <accordion-tab question="What is Synque?"> </accordion-tab>
+      <accordion-tab
+        question="When I deactivate my account, do I lose all my information?"
+      >
+      </accordion-tab>
+      <accordion-tab
+        question="My payment history isn’t reflecting my recent payments and I’ve been debited, what can i do?"
+      >
+      </accordion-tab>
+      <accordion-tab
+        question="If my account is off, can I still get notifications?"
+      >
+      </accordion-tab>
+      <accordion-tab question="How many pictures am I allowed to upload?">
+        There is no limit to the number of images you can upload on your
+        account, as number depends on the owner of the account.
+      </accordion-tab>
+      <accordion-tab
+        question="How do I launch or get my page published or seen by others?"
+      >
+      </accordion-tab>
+      <accordion-tab
+        question="How do I get the link to my page in order to share it?"
+      >
+      </accordion-tab>
+      <accordion-tab question="How many links am I allowed to add to my page?">
+        Profile owners on the Synq.ue App can upload 10 links, that includes
+        their social media links and any other links. They can also upload 6
+        media files including images, audio, podcasts, videos. If they intend to
+        add more links or media, they would have to subscribe for the premium
+        service.
+      </accordion-tab>
+      <accordion-tab
+        question="I am having issues editing my profile, I get error messages
+            everytime, what do I do?"
+      >
+      </accordion-tab>
+    </section>
+  </main>
 </template>
 
 <script>
+import AccordionTab from "./AccordionTab.vue";
 export default {
+  components: { AccordionTab },
   name: "FaqSection",
 };
 </script>
 
 <style scoped>
-.middle {
+main {
   flex: 1;
   height: 100%;
   padding: 4rem 8rem 4rem 2.5rem;
   background-color: #fcfcfc;
+  margin-left: 331px;
+  overflow-x: hidden;
 }
 
 .heading {
+  padding-left: 3.2rem;
+  margin-bottom: 4rem;
 }
 
 .heading h2 {
   font-size: 3.2rem;
-}
-
-.heading h2 i {
-  margin-right: 1.2rem;
+  font-weight: 500;
 }
 
 .heading p {
@@ -68,17 +88,14 @@ export default {
   color: var(--black);
   opacity: 0.7;
   font-weight: 400;
-  margin-block: 2.2rem 1.4rem;
+  margin-block: 1.6rem 2rem;
 }
 
 form {
   background-color: #eeeeee;
-  position: relative;
-  margin-bottom: 2.5rem;
-  margin-right: 1.7rem;
   border-radius: 8px;
   display: flex;
-  height: 58px;
+  height: 72px;
 }
 
 form .form-input {

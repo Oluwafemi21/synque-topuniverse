@@ -1,8 +1,6 @@
 <template>
-  <main>
-    <main-sidebar />
-    <faq-section />
-  </main>
+  <main-sidebar />
+  <faq-section />
 </template>
 
 <script>
@@ -59,17 +57,17 @@ html {
 #app {
   height: 100vh;
   width: 100vw;
-}
-
-main {
-  height: 100%;
-  width: 100%;
   display: flex;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+p {
+  line-height: 2.4rem;
+  letter-spacing: 0.5px;
 }
 
 li {

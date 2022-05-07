@@ -1,5 +1,5 @@
 <template>
-  <aside class="left">
+  <aside>
     <div class="logo">
       <img src="@/assets/synque.svg" alt="Company Logo" />
       <img src="@/assets/icons/play.svg" alt="Go Back" />
@@ -37,6 +37,12 @@
       </li>
       <li>
         <a href="/" class="nav-link">
+          <img src="@/assets/icons/account.svg" alt="account" />
+          <span>My Account</span>
+        </a>
+      </li>
+      <li>
+        <a href="/" class="nav-link">
           <img src="@/assets/icons/commerce.svg" alt="commerce" />
           <span>Commerce</span>
         </a>
@@ -55,7 +61,7 @@
         <div class="drop-down">
           <a href="/">Contact Us</a>
           <a href="/">Report a bug</a>
-          <a href="/">Suggest feature</a>
+          <a href="/">Suggest a feature</a>
           <a href="/" class="active-dropdown">FAQs</a>
         </div>
       </li>
@@ -85,7 +91,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.left {
+aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
   background-color: var(--purple);
   color: var(--white);
   font-size: 2.4rem;
@@ -103,27 +112,33 @@ export default {
   margin-top: 3.7rem;
 }
 
-.left ul {
+aside ul {
   margin-block: 8.2rem;
   align-self: center;
 }
 
-.left ul li {
+aside ul li {
   margin-bottom: 3.2rem;
 }
 
-.left .nav-link {
+aside .nav-link {
   display: flex;
   align-items: center;
-  padding: 1.3rem 2.1rem 1.3rem 0;
   gap: 1.2rem;
 }
 
-.left .active {
+aside .active {
   background-color: var(--yellow);
   color: var(--black);
   border-radius: 10px;
   transition: background-color 0.05s ease;
+  margin-inline: auto;
+}
+
+.nav-link span {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-align: center;
 }
 
 .active:nth-child(1) {
@@ -143,8 +158,8 @@ export default {
 
 .active-tab .drop-down {
   text-align: left;
-  padding-left: 4rem;
-  margin: 2rem 0 0 3rem;
+  padding-left: 1.6rem;
+  margin: 1.6rem 0 0 3rem;
   border-left: 1px solid var(--white);
   display: flex;
   flex-direction: column;
@@ -154,7 +169,9 @@ export default {
 .drop-down a {
   display: block;
   font-size: 1.6rem;
+  font-weight: 500;
   line-height: 2.4rem;
+  letter-spacing: 0.1px;
 }
 
 .drop-down a:hover,
