@@ -1,16 +1,19 @@
 <template>
-  <main-sidebar />
-  <faq-section />
+  <main-sidebar v-show="isLoggedin"></main-sidebar>
+  <router-view />
 </template>
 
 <script>
 import MainSidebar from "@/components/Sidebar.vue";
-import FaqSection from "./components/FaqSection.vue";
 export default {
   name: "App",
   components: {
     "main-sidebar": MainSidebar,
-    FaqSection,
+  },
+  data() {
+    return {
+      isLoggedin: false,
+    };
   },
 };
 </script>
@@ -76,5 +79,22 @@ li {
 
 button {
   cursor: pointer;
+}
+
+main {
+  flex: 1;
+  height: 100%;
+  background-color: #fcfcfc;
+  overflow-x: hidden;
+  margin-left: 331px;
+}
+
+input {
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 20px;
+  padding: 26px 16px;
+  background: #eeeeee;
 }
 </style>

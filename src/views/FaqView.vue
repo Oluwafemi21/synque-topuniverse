@@ -56,10 +56,10 @@
 </template>
 
 <script>
-import AccordionTab from "./AccordionTab.vue";
+import AccordionTab from "@/components/AccordionTab.vue";
 export default {
   components: { AccordionTab },
-  name: "FaqSection",
+  name: "FaqView",
 };
 </script>
 
