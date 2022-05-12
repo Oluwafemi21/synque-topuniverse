@@ -42,6 +42,7 @@ export default {
   --yellow: #ffbd69;
   --white: #fcfcfc;
   --black: #121212;
+  --grey: #eeeeee;
 }
 
 /* CSS RESET */
@@ -89,12 +90,85 @@ main {
   margin-left: 331px;
 }
 
-input {
+.form-area {
+  width: 50%;
+  display: grid;
+  place-items: start center;
+  margin-top: 71px;
+}
+.form-container {
+  min-width: 500px;
+  height: 100%;
+}
+
+.form-container h1 {
+  font-size: 48px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form label {
+  color: #121212;
+  display: block;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+label[for="remember"] {
+  color: #121212;
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.form-control input,
+.form-control select {
   border: none;
   border-radius: 8px;
-  width: 100%;
   font-size: 20px;
   padding: 26px 16px;
-  background: #eeeeee;
+  background: var(--grey);
+}
+
+.form-control input {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  height: 14px;
+  display: inline-block;
+  background-color: var(--purple);
+  width: 14px;
+}
+
+.form button {
+  height: 7.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.btn {
+  background: var(--purple);
+  color: white;
+}
+
+.short-link {
+  font-weight: bold;
+  color: var(--purple);
+}
+
+.no-account {
+  font-size: 20px;
+}
+
+.form span {
+  text-align: center;
+  font-size: 20px;
 }
 </style>

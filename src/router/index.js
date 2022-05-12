@@ -20,10 +20,22 @@ const routes = [
             import("../views/Login/LoginView.vue"),
     },
     {
-        path: "/short-profile",
+        path: "/profile",
         name: "profile",
         component: () =>
             import("../views/Login/ShortProfileView.vue"),
+    },
+    {
+        path: "/categories",
+        name: "categories",
+        component: () =>
+            import("../views/Login/CategoriesView.vue"),
+    },
+    {
+        path: "/congrats",
+        name: "congrats",
+        component: () =>
+            import("../views/Login/CongratView.vue"),
     },
     {
         path: "/settings",
