@@ -1,6 +1,6 @@
 <template>
   <main-sidebar v-show="isLoggedin"></main-sidebar>
-  <router-view />
+  <router-view @show-sidebar="showMenu" />
 </template>
 
 <script>
@@ -14,6 +14,11 @@ export default {
     return {
       isLoggedin: false,
     };
+  },
+  methods: {
+    showMenu() {
+      this.isLoggedin = !this.isLoggedin;
+    },
   },
 };
 </script>

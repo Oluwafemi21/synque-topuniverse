@@ -6,7 +6,7 @@
     </div>
     <ul>
       <li>
-        <router-link to="/" class="nav-link" :class="{ active: isActive }">
+        <router-link to="/home" class="nav-link">
           <svg
             class="icon"
             width="18"

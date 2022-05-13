@@ -13,7 +13,9 @@
           </p>
         </div>
         <router-link to="/home"
-          ><button class="btn">Start creating</button></router-link
+          ><button class="btn" @click="showSidebar">
+            Start creating
+          </button></router-link
         >
       </div>
     </div>
@@ -26,6 +28,11 @@ import WelcomeImage from "@/components/WelcomeImage.vue";
 export default {
   components: { WelcomeImage },
   name: "CongratView",
+  methods: {
+    showSidebar() {
+      this.$emit("showSidebar");
+    },
+  },
 };
 </script>
 
